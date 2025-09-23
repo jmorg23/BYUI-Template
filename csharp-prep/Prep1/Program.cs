@@ -1,9 +1,49 @@
 using System;
+using System.ComponentModel;
 
-class Program
+public class Program : Program3, Program2 
 {
-    static void Main(string[] args)
+
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep1 World!");
+
+        Console.Write("enter first name: ");
+        string fn = Console.ReadLine();
+
+        Console.Write("enter last name: ");
+        string ln = Console.ReadLine();
+
+        Console.WriteLine("your name is "+ln+", "+fn+" "+ln);
+
+
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+
+    }
+    public void hello()
+    {
+        Console.Write("hello");
+
+        
+    }
+   
+
+
+    public override void hey()
+    {
+
+    }
+
+    public static int h = 0;
+
+    public Program(int instanceNum) : base(instanceNum)
+    {
+        base.w();
     }
 }
