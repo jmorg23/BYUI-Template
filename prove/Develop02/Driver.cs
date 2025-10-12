@@ -84,8 +84,6 @@ class Driver
             foreach (Entry entry in entries)
             {
                 journal.AddEntry(entry);
-                Console.WriteLine(entry);
-                Console.WriteLine("-----yes there was a new entry-----");
             }
 
             journals.Add(journal);
@@ -105,13 +103,11 @@ class Driver
         Entry entryCon = new Entry(entries);
         while (i < journalParts.Length)
         {
-            Console.WriteLine(journalParts[i]);
-            Console.WriteLine("-----checking for new entry-----");
+
             if (journalParts[i].Contains("<NEW ENTRY>"))
             {
                 if (entryCon._contents != "")
                 {
-                    Console.WriteLine("-----new entry added-----");
                     entryParts.Add(entryCon);
                 }
 
