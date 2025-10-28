@@ -92,7 +92,7 @@ class Program
             }
             List<int> tried = new List<int>();
             int i;
-            while (scriptures[(i = r.Next(scriptures.Count))].Next() == false)
+            while (scriptures[i = r.Next(scriptures.Count)].Next() == false)
             {
                 if (!tried.Contains(i))
                 {
